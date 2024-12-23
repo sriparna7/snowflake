@@ -9,7 +9,7 @@ create or replace table demo_db.public.emp_basic_1 (
          start_date date
 );
 
-put file:///workspace/snowflake/Module-2/Snowflake-stages/Data/Employee/employees0*.csv 
+put file:///workspaces/snowflake/Module-2/Snowflake-stages/Data/Employee/employees0*.csv 
 @demo_db.public.%emp_basic_1;
 
 
@@ -43,7 +43,7 @@ create or replace table demo_db.public.emp_basic_2 (
          email string 
 );
 
-put file:///workspace/snowflake/Module-2/Snowflake-stages/Data/Employee/employees0*.csv @demo_db.public.%emp_basic_2;
+put file:///workspaces/snowflake/Module-2/Snowflake-stages/Data/Employee/employees0*.csv @demo_db.public.%emp_basic_2;
 
 copy into demo_db.public.emp_basic_2
 from (select  t.$1 , t.$2 , t.$3 from @demo_db.public.%emp_basic_2 t)
@@ -71,7 +71,7 @@ create or replace table demo_db.public.emp_basic_local (
 
 # Upload data to stagig area.
 
-put file:///workspace/snowflake/Module-2/Snowflake-stages/Data/Employee/employees0*.csv 
+put file:///workspaces/snowflake/Module-2/Snowflake-stages/Data/Employee/employees0*.csv 
 @demo_db.public.%emp_basic_local;
 
 # Copy data from staging area to snowflake.

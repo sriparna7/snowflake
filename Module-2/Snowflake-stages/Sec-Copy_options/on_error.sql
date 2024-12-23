@@ -9,6 +9,14 @@
          start_date date
 );
 
+create or replace file format csv_format
+type = csv;
+
+-- Create stage objete to read s3 file.
+create or replace stage my_s3_stage
+url = 's3://snowflakesmpdata/employee/'
+file_format = csv_format;
+
 -- Load data into table ignoring rejected records.
 
 copy into emp

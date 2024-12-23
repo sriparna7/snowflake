@@ -1,11 +1,27 @@
 /*****************************************************************************/
 
+create database demo_db;
+Use database demo_db;
+
+create or replace file format my_csv_format
+type = csv;
+
 -- Copy zip files
 
 create or replace stage my_s3_zip_stage
-  storage_integration = s3_int
+  --storage_integration = s3_int
   url = 's3://snowflakecrctest/zip_folder/'
-  file_format = control_db.file_formats.my_csv_format;
+  file_format = my_csv_format;
+  
+create or replace table demo_db.public.emp_ext_stage (
+         --file_name string,
+         first_name string ,
+         last_name string ,
+         email string ,
+         streetaddress string ,
+         city string ,
+         start_date date
+);
   
 truncate table emp_ext_stage
 
