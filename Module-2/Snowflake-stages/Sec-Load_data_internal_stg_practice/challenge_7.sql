@@ -1,5 +1,5 @@
 
-PUT file:///workspace/snowflake/Module-2/Snowflake-stages/Data/Practice_data/countries/a* @%population_afgn/countries_a/;
+PUT file:///workspaces/snowflake/Module-2/Snowflake-stages/Data/Practice_data/countries/a* @%population_afgn/countries_a/;
 
 create or replace table demo_db.public.population_afgn
 (

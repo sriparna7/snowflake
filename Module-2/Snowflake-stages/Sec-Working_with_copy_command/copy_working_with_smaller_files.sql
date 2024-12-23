@@ -19,7 +19,7 @@ MISSING_DATA BOOLEAN,
 POLYLINE ARRAY
 );
 
-put file:///Users/phchannappa/Downloads/Snowfalke_udemy/Workingwithcopycommand/split/train* @READER_SALES.PUBLIC.%TAXI_DRIVE_SMALL_FILES;
+put file:///workspaces/snowflake/Module-2/Snowfalke_udemy/Workingwithcopycommand/split/train* @READER_SALES.PUBLIC.%TAXI_DRIVE_SMALL_FILES;
 
 split -b 50000000  train.csv split/train_split_
 

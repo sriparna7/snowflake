@@ -9,7 +9,7 @@ from demo_db.public.emp_basic_local
 file_format = (type = csv field_optionally_enclosed_by='"')
 --on_error = 'skip_file';
 
-get @demo_db.public.%emp_basic_local file:///workspace/snowflake/Module-2/Snowflake-stages/Data/Employee/unload/;
+get @demo_db.public.%emp_basic_local file:///workspaces/snowflake/Module-2/Snowflake-stages/Data/Employee/unload/;
 
 -- Unload data scene 2
 

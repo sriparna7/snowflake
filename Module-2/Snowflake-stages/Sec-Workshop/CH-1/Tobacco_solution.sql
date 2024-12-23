@@ -38,7 +38,7 @@ ProvisionID NUMBER
 
 snowsql -a cszyxhr-xr61722
 
-put file:///Users/phchannappa/Downloads/CDC_STATE_System_Tobacco_Legislation_-_Smokefree_Indoor_Air.csv @control_db.internal_stages.My_internal_stage/Tobacco/;
+put file:///workspaces/snowflake/Module-2/CDC_STATE_System_Tobacco_Legislation_-_Smokefree_Indoor_Air.csv @control_db.internal_stages.My_internal_stage/Tobacco/;
 
 list @My_internal_stage
 

@@ -52,7 +52,7 @@ Withdrawls	VARCHAR,
 Balance	VARCHAR
 )
 
-put file:///Users/pradeep/Downloads/HR_CREDIT.csv @My_internal_stage/Hr_data/;
+put file:///workspaces/snowflake/Module-2/HR_CREDIT.csv @My_internal_stage/Hr_data/;
 
 
 COPY INTO HR_EMP_DATA
