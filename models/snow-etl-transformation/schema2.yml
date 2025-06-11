@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: call_centre_dim
+    columns:
+      - name: id
+        tests:
+          - relationships:
+              to: SNOW_DBT_ETL.ETL_CONNECT.CALL_CENTRE_FK
+              field: call_center_id
+              tags: [relation]
