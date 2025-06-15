@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: call_centre_dim
+    columns:
+      - name: id
+        tests:
+          - relationships:
+              to: source('sri1','call_centre_fk')
+              field: call_center_id
+              tags: [relation]
