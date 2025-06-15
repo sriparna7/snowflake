@@ -15,3 +15,4 @@ sources:
       - name: employee_data
       - name: stock
       - name: teams
+      - name: student_assignment 
