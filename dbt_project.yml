@@ -39,5 +39,7 @@ models:
     example:
       +materialized: table
     snow-etl-transformation:
-    # Applies to all files under models/snow-etl-transformation
+      # Applies to all files under models/snow-etl-transformation
       +materialized: table
+#    +database: "{{ var('target_database', target.database) }}"
+#    +schema: "{{ var('target_schema', target.schema) }}"

@@ -7,10 +7,11 @@
   )
 }}
 
-with source as
+with source1 as
 (select emp_id,concat(emp_id,'_',emp_name) as identity_main,emp_joining_dt
-from SNOW_DBT_ETL.ETL_CONNECT.EMPLOYEE_DATA)
-select * from source
+ from {{source('sri1','employee_data')}})
+--from SNOW_DBT_ETL.ETL_CONNECT.EMPLOYEE_DATA)
+select * from source1
 
 {% if is_incremental() %}
 WHERE emp_id > (SELECT MAX(emp_id) FROM {{ this }})

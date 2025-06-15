@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: sri1
+    schema: etl_connect
+    tables:
+      - name: call_centre
+      - name: call_centre_fk
+        config:
+          freshness:
+            warn_after: { count: 1, period: minute }
+            error_after: { count: 3, period: minute }
+            loaded_at_field: UPDATED_AT
+      - name: emp_dept
+      - name: employee_data
+      - name: stock
+      - name: teams

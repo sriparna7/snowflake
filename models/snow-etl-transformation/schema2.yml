@@ -6,6 +6,6 @@ models:
       - name: id
         tests:
           - relationships:
-              to: SNOW_DBT_ETL.ETL_CONNECT.CALL_CENTRE_FK
+              to: source('sri1','call_centre_fk')
               field: call_center_id
               tags: [relation]
